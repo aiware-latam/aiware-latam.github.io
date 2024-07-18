@@ -285,6 +285,12 @@ ol {
 
 .logo a {
 	display: inline-block;
+	font-size: x-large;
+	color: inherit;
+}
+
+.logo a:hover {
+	color: inherit;
 }
 
 .nav-menu {
@@ -395,7 +401,7 @@ ol {
 }
 
 .hero-section .hero-text {
-	padding-top: 184px;
+	padding-top: 90px;
 }
 
 .hero-section .hero-text span {
@@ -403,10 +409,11 @@ ol {
 	color: #f44949;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-weight: bolder;
 }
 
 .hero-section .hero-text h2 {
-	font-size: 60px;
+	font-size: 40px;
 	color: #ffffff;
 	line-height: 72px;
 	font-weight: 600;
@@ -483,7 +490,7 @@ ol {
 -----------------------*/
 
 .home-about-section {
-	padding-bottom: 90px;
+	padding-bottom: 50px;
 }
 
 .ha-pic {
@@ -498,7 +505,7 @@ ol {
 }
 
 .ha-text {
-	padding-top: 74px;
+	padding-top: 0px;
 }
 
 .ha-text h2 {
@@ -637,7 +644,7 @@ ol {
 
 .schedule-tab .nav-tabs .nav-item {
 	border-right: 1px solid #e7e7e8;
-	width: 20%;
+	width: 50%;
 	text-align: center;
 }
 
@@ -1056,6 +1063,11 @@ ol {
   Home Contact 
 -----------------------*/
 
+#organizers a {
+	font-weight: bolder;
+	color: #000;
+}
+
 .contact-section .section-title {
 	text-align: left;
 	margin-bottom: 40px;
@@ -1126,6 +1138,10 @@ ol {
 	background: #171822;
 	padding-top: 50px;
 	padding-bottom: 60px;
+}
+
+.footer-section .section-title h2 {
+	color: #ffffff;
 }
 
 .partner-logo {
@@ -1276,6 +1292,10 @@ ol {
 
 .about-section .section-title h2 {
 	margin-bottom: 20px;
+}
+
+.about-section .section-title h4 {
+	padding-top: 15px;
 }
 
 .about-section .section-title p {
