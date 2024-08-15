@@ -100,7 +100,8 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	outline: none;
-	color: #fff;
+	/* color: #fff; */
+	color: #6a6b7c;
 }
 
 ul,
@@ -1953,7 +1954,8 @@ ol {
 
 .bd-text .bd-tag-share .tag a:hover {
 	background: #f44949;
-	color: #ffffff;
+	/* color: #ffffff; */
+	color: #6a6b7c;
 }
 
 .bd-text .bd-tag-share .s-share {
@@ -1981,7 +1983,8 @@ ol {
 }
 
 .bd-text .bd-tag-share .s-share a:hover {
-	color: #ffffff;
+	/* color: #ffffff; */
+	color: #6a6b7c;
 }
 
 /*---------------------
@@ -2435,7 +2438,8 @@ ol {
 	.slicknav_nav a:hover {
 		border-radius: 0;
 		background: #f44949;
-		color: #ffffff;
+		/* color: #ffffff; */
+		color: #6a6b7c;
 	}
 	.slicknav_nav .slicknav_row:hover {
 		border-radius: 0;
