@@ -490,6 +490,9 @@
                                                 <div class="sc-text">
                                                     <h4>Lighting Talks: Sessão 1</h4>
                                                     <h5>1a sessão de lightning talks da indústria e academia </h5><br/>
+                                                              <a href="#!" class="primary-btn open-lt-modal" data-day="dia-21">
+                                                                <i class="fa fa-bolt"></i> Ver ordem de apresentação (21/09)
+                                                            </a>
 
                                                 </div>
                                             </div>
@@ -667,6 +670,9 @@
                                                 <div class="sc-text">
                                                     <h4>Lighting Talks: Sessão 2</h4>
                                                     <h5>2a sessão de lightning talks da indústria e academia</h5><br/>
+          <a href="#!" class="primary-btn open-lt-modal" data-day="dia-22">
+            <i class="fa fa-bolt"></i> Ver ordem de apresentação (22/09)
+          </a>                                                    
                                                     <ul>
                                                     </ul>
                                                 </div>
@@ -1199,7 +1205,97 @@
       });
     }
   });
-</script>    
+</script>  
+<!-- Modal: Ordem das Lightning Talks -->
+<div class="modal fade" id="ltModal" tabindex="-1" role="dialog" aria-labelledby="ltModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ltModalLabel">Lightning Talks — Ordem de Apresentação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ol id="ltOrder" class="pl-3 mb-0"></ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="primary-btn" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  // Formato: { titulo: "...", autor: "...", afiliacao: "..." }
+  const ltData = {
+    "dia-21": [
+      { titulo: "Impactos da IA Generativa na Engenharia de Software", autor: "Alex Trajano; Matheus Paixão", afiliacao: "Instituto Atlântico / UECE" },
+      { titulo: "Produtividade de Desenvolvimento com Modelos de Linguagem", autor: "João Eduardo Montandon", afiliacao: "UFMG" },
+      { titulo: "Tema a confirmar", autor: "Fabio Passos; Dali Santos", afiliacao: "Bradesco" },
+      { titulo: "Uso de LLMs para geração de testes de unidade e detecção de conflitos semânticos de código", autor: "Paulo Borba", afiliacao: "UFPE" },
+      { titulo: "A confirmar", autor: "Afonso Lima", afiliacao: "DataStream" },
+      { titulo: "Geração Automatizada de Casos de Teste a partir de Requisitos em Linguagem Natural usando LLMs", autor: "Isela Mendoza Del Castillo", afiliacao: "UFF" },
+      { titulo: "Tema a confirmar", autor: "Diego Barros Delgado", afiliacao: "CESAR" }
+    ],
+    "dia-22": [
+      { titulo: "Engenharia de Software com LLMs: Padrões, Reuso e Decisões Arquiteturais", autor: "Rafael Augusto Scaraficci; Rafael de Melo Cuba", afiliacao: "CPqD" },
+      { titulo: "IA Generativa no Dev: O Caminho da Maturidade", autor: "Andréa Sabedra Bordin", afiliacao: "UFSC" },
+      { titulo: "Tema a confirmar", autor: "Emanuel Estumano; Carlos Favacho", afiliacao: "Vibe Tecnologia" },
+      { titulo: "Entre Humanos e Máquinas: A Coevolução da Engenharia de Software na Era da GenAI", autor: "Karina Kohl; Letícia Machado", afiliacao: "UFRGS" },
+      { titulo: "Chatbots Generativos: Acertos, Armadilhas e Futuro", autor: "Leonardo Marques Rocha", afiliacao: "Instituto Atlântico" },
+      { titulo: "Uso de LLMs na Engenharia de Requisitos", autor: "Jaelson Freire Brelaz de Castro", afiliacao: "UFPE" },
+      { titulo: "Engenharia de IA Responsável em cursos de graduação e pós", autor: "Humberto Torres Marques Neto", afiliacao: "PUC Minas" }
+    ]
+  };
+
+  // ===== 2) Abre o modal com a lista do dia =====
+  function openLtModal(dayKey) {
+    const items = ltData[dayKey] || [];
+    const list = document.getElementById("ltOrder");
+    list.innerHTML = "";
+
+    if (!items.length) {
+      list.innerHTML = '<li>A ordem será divulgada em breve.</li>';
+    } else {
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "mb-2";
+        li.innerHTML = `
+          <strong>${item.titulo}</strong><br/>
+          <small>${item.autor || ""}${item.afiliacao ? " — " + item.afiliacao : ""}</small>
+        `;
+        list.appendChild(li);
+      });
+    }
+
+    const label = document.getElementById("ltModalLabel");
+    label.textContent = dayKey === "dia-21"
+      ? "Lightning Talks — 21/09 (Domingo)"
+      : "Lightning Talks — 22/09 (Segunda)";
+
+    $('#ltModal').modal('show');
+  }
+
+  // ===== 3) Liga os botões "Ver ordem" =====
+  $(document).on('click', '.open-lt-modal', function (e) {
+    e.preventDefault();
+    const day = this.getAttribute('data-day');
+    openLtModal(day);
+  });
+
+  // ===== 4) (Opcional) Link direto via ?lt=dia-21 ou ?lt=dia-22 =====
+  (function autoOpenFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const lt = params.get('lt');
+    if (lt && (lt === 'dia-21' || lt === 'dia-22')) {
+      document.getElementById('programa')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => openLtModal(lt), 300);
+    }
+  })();
+</script>
+
 </body>
 
 </html>
