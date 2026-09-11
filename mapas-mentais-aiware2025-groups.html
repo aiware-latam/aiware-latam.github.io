@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="margin:0;">
+<title>Temas do AIWare 2025</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Kalam:wght@400;700&family=Pacifico&display=swap">
+<style>
+  :root {
+    --bg: #eef0ef;
+    --surface: #ffffff;
+    --ink: #1b2430;
+    --muted: #5b6b74;
+    --accent-2: #b5502d;
+    --border: #d8dede;
+    --branch-1: #d84a3e;
+    --branch-2: #3763e0;
+    --branch-3: #2f9e44;
+    --branch-4: #8a4fe0;
+    --branch-5: #d9820c;
+    --branch-6: #0f9aa4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10151a;
+      --surface: #1a2129;
+      --ink: #e7ecef;
+      --muted: #96a8b1;
+      --accent-2: #e8935a;
+      --border: #2a343d;
+      --branch-1: #ff7267;
+      --branch-2: #7d9dff;
+      --branch-3: #57d97a;
+      --branch-4: #bd93ff;
+      --branch-5: #ffb04d;
+      --branch-6: #45d9e2;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10151a;
+    --surface: #1a2129;
+    --ink: #e7ecef;
+    --muted: #96a8b1;
+    --accent-2: #e8935a;
+    --border: #2a343d;
+    --branch-1: #ff7267;
+    --branch-2: #7d9dff;
+    --branch-3: #57d97a;
+    --branch-4: #bd93ff;
+    --branch-5: #ffb04d;
+    --branch-6: #45d9e2;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+    padding-inline: max(16px, calc((100vw - 980px) / 2));
+    padding-block: 48px 64px;
+  }
+
+  main { max-width: 980px; margin-inline: auto; }
+
+  header.page-head { max-width: 1000px; margin-bottom: 40px; }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.90rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .eyebrowT {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.80rem;
+    letter-spacing: 0.05em;
+    color: var(--accent-2);
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+
+  h1 {
+    /*font-family: 'Fraunces', Georgia, serif;*/
+    font-family: 'Garamond', 'Baskerville', sans-serif;
+    font-weight: 800; /*700*/
+    font-size: clamp(1.9rem, 1.4rem + 2vw, 2.7rem);
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: 0 0 14px;
+  }
+
+  .page-head p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .stack { display: flex; flex-direction: column; gap: 28px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 22px 20px;
+  }
+
+  .card-head { margin-bottom: 8px; }
+  .card .eyebrow { margin-bottom: 6px; }
+
+  .theme-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 2px dashed var(--accent-2);
+    border-radius: 18px;
+    padding: 30px 20px 20px;
+    position: relative;
+  }
+
+  .theme-group::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -12px;
+    left: 22px;
+    background: var(--bg);
+    padding: 0 10px;
+    /*font-family: 'IBM Plex Mono', ui-monospace, monospace;*/
+    font-family: 'Baloo 2';
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+  }
+
+  .theme-group .card { border-style: solid; }
+
+  .card h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.28;
+    text-wrap: balance;
+    margin: 0 0 4px;
+  }
+
+  .card .source-title {
+    color: var(--muted);
+    font-size: 0.86rem;
+    line-height: 1.45;
+    margin: 0 0 6px;
+    max-width: 80ch;
+  }
+
+  figure.mindmap { margin: 0; }
+  .mindmap svg { width: 100%; height: auto; max-width: 100%; display: block; }
+
+  footer.note {
+    margin-top: 40px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+  }
+
+  @media (max-width: 460px) {
+    body { padding-block: 32px 48px; }
+    h1 { font-size: 1.7rem; }
+    .card { padding: 16px 14px 16px; }
+  }
+</style>
+
+<main>
+  <header class="page-head">
+    <div class="eyebrow">AIWare 2025 · Engenharia de Software e IA</div>
+    <h1>Temas AIWare 2025, Recife/PE</h1>
+    <p>Cada mapa traz o tema central, seus principais tópicos e os subtemas discutidos no texto.</p>
+  </header>
+
+  <section class="stack" id="stack"></section>
+
+</main>
+
+<script>
+  const THEMES = [
+    {
+      code: 'Tema 1',
+      center: 'Novatos',
+      title: 'Como lidar com o futuro da carreira dos novos profissionais (juniores) na profissão de ES',
+      topics: [
+        { emoji: '⚙️', title: 'Produtividade e Dev Exp', bullets: ['Lacunas em conhecimentos práticos', 'Cultura orientada ao aprendizado', 'Ferramentas e processos bem desenhados'] },
+        { emoji: '🤝', title: 'Integração e mentoria', bullets: ['Onboarding estruturado', 'Feedbacks construtivos', 'Times colaborativos e ágeis'] },
+        { emoji: '💬', title: 'Satisfação e engajamento', bullets: ['Sentimento de pertencimento', 'Clareza nas expectativas', 'Equilíbrio entre desafio e suporte'] },
+        { emoji: '📚', title: 'Aprendizado contínuo', bullets: ['Cursos e conferências', 'Hackathons', 'Grupos de estudo internos'] },
+        { emoji: '🌱', title: 'Ambientes inclusivos', bullets: ['Diversidade nos times', 'Cultura centrada no ser humano', 'Retenção de talentos'] },
+        { emoji: '🧭', title: 'Autogestão e adaptação', bullets: ['Habilidades adaptativas', 'Colaboração em equipe', 'Preparo para desafios do século XXI'] }
+      ]
+    },
+    {
+      code: 'Tema 2',
+      center: 'Educação',
+      title: 'Educação assistida por IA, adaptação das disciplinas e currículos de engenharia de software',
+      topics: [
+        { emoji: '🎯', title: 'Personalização do ensino', bullets: ['Feedback automatizado', 'Trilhas de aprendizado individuais', 'Identificação de deficiências e potenciais'] },
+        { emoji: '📘', title: 'Currículos reformulados', bullets: ['Aprendizado de máquina', 'Segurança de sistemas inteligentes', 'Engenharia de dados'] },
+        { emoji: '⚖️', title: 'Ética em IA', bullets: ['Reflexão crítica sobre limites da IA', 'Formação de profissionais éticos', 'Cenários de incerteza'] },
+        { emoji: '✅', title: 'Avaliação por competências', bullets: ['Simulações de situações reais', 'Métodos avaliativos híbridos', 'Aprendizado híbrido humano-IA'] },
+        { emoji: '🧑‍🏫', title: 'Papel do professor', bullets: ['Facilitador e curador de conteúdo', 'Orientador crítico', 'Formação docente continuada'] },
+        { emoji: '🌍', title: 'Equidade de acesso', bullets: ['Acesso desigual às tecnologias', 'Transparência dos algoritmos', 'Inclusão digital'] }
+      ]
+    },
+    {
+      code: 'Tema 3',
+      center: 'Produtividade',
+      title: 'Como mensurar produtividade e distinguir o que é resultado da IA e do profissional',
+      topics: [
+        { emoji: '🤖', title: 'Tarefas automatizadas x humanas', bullets: ['Tarefas totalmente automatizadas', 'Tarefas colaborativas homem-máquina', 'Tarefas exclusivamente humanas'] },
+        { emoji: '📊', title: 'Métricas híbridas', bullets: ['Análise de logs de atividade', 'Indicadores de performance diferenciados', 'Métricas qualitativas e quantitativas'] },
+        { emoji: '✍️', title: 'Autoria em projetos híbridos', bullets: ['Atribuição de autoria', 'Debates éticos e legais', 'Singularidade criativa do colaborador'] },
+        { emoji: '🔍', title: 'Rastreabilidade e versionamento', bullets: ['Sistemas de versionamento', 'Trilhas de auditoria', 'Registros de intervenção'] },
+        { emoji: '📋', title: 'Governança e compliance', bullets: ['Práticas de governança', 'Riscos da automação', 'Adaptação contínua das ferramentas'] },
+        { emoji: '🔎', title: 'Equidade e transparência', bullets: ['Avaliação justa de desempenho', 'Ambientes de trabalho transparentes', 'Convivência humano-IA produtiva'] }
+      ]
+    },
+    {
+      code: 'Tema 4',
+      center: 'Testes Automatizados',
+      title: 'Automação de testes e geração de casos de teste como competência essencial',
+      topics: [
+        { emoji: '🔄', title: 'CI/CD integrado', bullets: ['Integração e entrega contínuas', 'Redução de custos e riscos', 'Conformidade a cada atualização'] },
+        { emoji: '🐞', title: 'Detecção precoce de defeitos', bullets: ['Execução rápida de scripts', 'Reutilização de cenários', 'Feedback imediato aos devs'] },
+        { emoji: '🧩', title: 'Geração de casos de teste', bullets: ['Análise de valores limites', 'Partição de equivalência', 'Teste baseado em requisitos'] },
+        { emoji: '🗺️', title: 'Testes baseados em modelos', bullets: ['Geração automática a partir de modelos', 'Entendimento do domínio do sistema', 'Cobertura de riscos mapeados'] },
+        { emoji: '📄', title: 'Documentação viva', bullets: ['Cenários como documentação', 'Rastreabilidade para a equipe', 'Cobertura de fluxos e exceções'] },
+        { emoji: '🏆', title: 'Qualidade estratégica', bullets: ['Confiança nas releases', 'Menos retrabalho', 'Satisfação do cliente final'] }
+      ]
+    },
+    {
+      code: 'Tema 5',
+      center: 'Sistemas Legados',
+      title: 'Manutenção e modernização de sistemas legados, incluindo o uso de agentes baseados em IA',
+      topics: [
+        { emoji: '💳', title: 'Dívida técnica', bullets: ['Pouca documentação', 'Tecnologias obsoletas', 'Processos manuais e trabalhosos'] },
+        { emoji: '🔬', title: 'Agentes de diagnóstico', bullets: ['Análise de padrões no código', 'Identificação de duplicidades', 'Previsão de áreas propensas a erros'] },
+        { emoji: '🛠️', title: 'Refatoração assistida por IA', bullets: ['Sugestão de melhorias arquiteturais', 'Refatoração de trechos ineficientes', 'Redução de esforço humano'] },
+        { emoji: '☁️', title: 'Migração para microsserviços', bullets: ['Arquiteturas orientadas a serviços', 'Integração com nuvem', 'Migração automática de código e dados'] },
+        { emoji: '🛡️', title: 'Governança de soluções de IA', bullets: ['Conformidade regulatória', 'Transparência dos modelos', 'Validação humana dos resultados'] },
+        { emoji: '🎓', title: 'Capacitação de equipes', bullets: ['Colaboração entre especialistas legados e IA', 'Mentalidade colaborativa', 'Resiliência organizacional'] }
+      ]
+    },
+    {
+      code: 'Tema 6',
+      center: 'Privacidade e Propriedade',
+      title: 'Privacidade, sigilo e propriedade intelectual, especialmente de prompts em ES',
+      topics: [
+        { emoji: '🔒', title: 'Privacidade de dados sensíveis', bullets: ['Dados embutidos em prompts', 'Segredos industriais', 'Risco de vazamento'] },
+        { emoji: '🏢', title: 'Sigilo corporativo', bullets: ['Políticas de confidencialidade', 'Direito de acesso ao conteúdo', 'Reutilização e replicação de prompts'] },
+        { emoji: '📝', title: 'Titularidade de prompts', bullets: ['Originalidade dos prompts', 'Prompts como ativos intangíveis', 'Comandos técnicos x expressão intelectual'] },
+        { emoji: '⚠️', title: 'Lacunas regulatórias', bullets: ['Ausência de diretrizes claras', 'Insegurança jurídica', 'Exploração comercial incerta'] },
+        { emoji: '🧾', title: 'Rastreabilidade de autoria', bullets: ['Governança de prompts', 'Frameworks de compliance', 'Dinamicidade dos ambientes digitais'] },
+        { emoji: '🗣️', title: 'Debate multidisciplinar', bullets: ['Juristas e engenheiros', 'Gestores e sociedade civil', 'Inovação responsável'] }
+      ]
+    },
+    {
+      code: 'Tema 7',
+      center: 'Interfaces',
+      title: 'A interação humano-máquina em linguagem natural pode impactar processos de ES',
+      topics: [
+        { emoji: '🌐', title: 'Democratização do acesso', bullets: ['Redução de barreiras técnicas', 'Usuários leigos', 'Inclusão digital'] },
+        { emoji: '🔁', title: 'Novo ciclo de requisitos', bullets: ['Levantamento de requisitos', 'Prototipagem', 'Testes de usabilidade'] },
+        { emoji: '🗂️', title: 'Curadoria de corpora', bullets: ['Treinamento de modelos de PLN', 'Ajuste fino de modelos', 'Avaliação multidimensional'] },
+        { emoji: '💭', title: 'Ambiguidade linguística', bullets: ['Ironias e duplos sentidos', 'Expressões idiomáticas', 'Contextos culturais'] },
+        { emoji: '🔐', title: 'Ética e privacidade', bullets: ['Responsabilidade algorítmica', 'Transparência das decisões', 'Coleta inadvertida de dados'] },
+        { emoji: '🎨', title: 'Design centrado no usuário', bullets: ['Compreensão contextual', 'Times multidisciplinares', 'Práticas ágeis co-criativas'] }
+      ]
+    },
+    {
+      code: 'Tema 8',
+      center: 'Processos',
+      title: 'Processos e Engenharia de Software',
+      topics: [
+        { emoji: '🧠', title: 'IA nativa e requisitos dinâmicos', bullets: ['Aprendizado e adaptação autônomos', 'Requisitos evolutivos', 'Simulações comportamentais'] },
+        { emoji: '🔗', title: 'Convergência com psicologia', bullets: ['Estudo do comportamento', 'Cognição e aprendizagem', 'Tomada de decisão sob incerteza'] },
+        { emoji: '🔄', title: 'Metodologias adaptativas', bullets: ['Ciclos de aprendizado', 'Integração contínua de feedback', 'Adaptação de waterfall e ágil'] },
+        { emoji: '✍️', title: 'Engenharia de prompts', bullets: ['Avaliação explanatória', 'Testes guiados por perfis cognitivos', 'Especificação do comportamento da IA'] },
+        { emoji: '⚖️', title: 'Vieses algorítmicos', bullets: ['Reações emocionais dos usuários', 'Falhas em cenários ambíguos', 'Neurociência e ciências sociais'] },
+        { emoji: '👥', title: 'Times interdisciplinares', bullets: ['Engenheiros e psicólogos', 'Especialistas em ética', 'Usuários finais no ciclo de vida'] }
+      ]
+    },
+    {
+      code: 'Tema 9',
+      center: 'Transição',
+      title: 'Estratégias para a transição de desenvolvedores para o paradigma da IA',
+      topics: [
+        { emoji: '🤝', title: 'Colaboração máquina-humano', bullets: ['Modelos de linguagem natural', 'Geração automática de código', 'Assistentes inteligentes de programação'] },
+        { emoji: '🔍', title: 'Curadoria e validação de outputs', bullets: ['Curadoria de prompts', 'Consciência de vieses', 'Confiabilidade e alinhamento'] },
+        { emoji: '📈', title: 'Requalificação profissional', bullets: ['Atualização técnica constante', 'Fluência em avaliação de riscos', 'Estratégias pedagógicas'] },
+        { emoji: '🧭', title: 'Gestão da mudança organizacional', bullets: ['Times multidisciplinares', 'Programas de treinamento', 'Cultura de experimentação'] },
+        { emoji: '🧑‍💻', title: 'Novos papéis', bullets: ['Engenheiro de prompt', 'Curador de modelos', 'Políticas de equidade e segurança'] },
+        { emoji: '📊', title: 'Métricas de desempenho', bullets: ['Ajuste de métricas de produtividade', 'Novos indicadores de performance', 'Transparência na adoção de IA'] }
+      ]
+    }
+  ];
+
+  const NS = 'http://www.w3.org/2000/svg';
+  const BRANCH_VARS = ['--branch-1', '--branch-2', '--branch-3', '--branch-4', '--branch-5', '--branch-6'];
+
+  const COL_WIDTH = 280;
+  const LEFT_X = 26;
+  const HUB_GAP = 46;
+  const TOP_MARGIN = 40;
+  const BOTTOM_MARGIN = 40;
+  const BLOCK_GAP = 34;
+  const TITLE_LH = 22;
+  const BULLET_LH = 19;
+  const GAP_TITLE_BULLETS = 8;
+  const GAP_BETWEEN_BULLETS = 5;
+  const TITLE_FS = 15.5;
+  const BULLET_FS = 13.5;
+
+  function wrapByWidth(measure, text, cls, maxWidth) {
+    const words = text.split(' ');
+    const lines = [];
+    let cur = '';
+    words.forEach(w => {
+      const test = cur ? cur + ' ' + w : w;
+      if (cur && measure(test, cls) > maxWidth) {
+        lines.push(cur);
+        cur = w;
+      } else {
+        cur = test;
+      }
+    });
+    if (cur) lines.push(cur);
+    return lines;
+  }
+
+  function layoutBlock(measure, topic, colorVar) {
+    const titleText = topic.emoji + '  ' + topic.title.toUpperCase();
+    const titleLines = wrapByWidth(measure, titleText, 'mm-branch-title', COL_WIDTH);
+
+    const bulletGroups = topic.bullets.map(b => wrapByWidth(measure, b, 'mm-bullet-text', COL_WIDTH - 20));
+
+    const entries = [];
+    let y = 0;
+    titleLines.forEach((line, i) => {
+      y += TITLE_LH;
+      entries.push({ text: line, cls: 'mm-branch-title', color: colorVar, y, indent: 0 });
+    });
+    y += GAP_TITLE_BULLETS - TITLE_LH + TITLE_LH; // reset baseline offset handled below
+    y -= TITLE_LH; // correction: recompute cleanly
+    // recompute cleanly to avoid confusion
+    y = titleLines.length * TITLE_LH + GAP_TITLE_BULLETS;
+
+    bulletGroups.forEach((lines, bi) => {
+      lines.forEach((line, li) => {
+        y += BULLET_LH;
+        const displayText = li === 0 ? '↳ ' + line : line;
+        entries.push({ text: displayText, cls: 'mm-bullet-text', color: null, y, indent: 14 });
+      });
+      if (bi < bulletGroups.length - 1) y += GAP_BETWEEN_BULLETS;
+    });
+
+    return { entries, height: y, titleLineCount: titleLines.length };
+  }
+
+  function buildMindMap(container, theme) {
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('role', 'img');
+    const flatTopics = theme.topics.map(t => t.title).join('; ');
+    svg.setAttribute('aria-label', theme.center + ': ' + flatTopics);
+    container.appendChild(svg);
+
+    // measurer
+    const measurer = document.createElementNS(NS, 'text');
+    measurer.setAttribute('x', -9999);
+    measurer.setAttribute('y', -9999);
+    svg.appendChild(measurer);
+    const measure = (str, cls) => {
+      measurer.setAttribute('class', cls);
+      measurer.textContent = str;
+      return measurer.getComputedTextLength();
+    };
+
+    const leftTopics = theme.topics.slice(0, 3);
+    const rightTopics = theme.topics.slice(3, 6);
+
+    const leftBlocks = leftTopics.map((t, i) => layoutBlock(measure, t, `var(${BRANCH_VARS[i]})`));
+    const rightBlocks = rightTopics.map((t, i) => layoutBlock(measure, t, `var(${BRANCH_VARS[i + 3]})`));
+
+    const leftTotal = leftBlocks.reduce((s, b) => s + b.height, 0) + BLOCK_GAP * (leftBlocks.length - 1);
+    const rightTotal = rightBlocks.reduce((s, b) => s + b.height, 0) + BLOCK_GAP * (rightBlocks.length - 1);
+    const contentHeight = Math.max(leftTotal, rightTotal, 300);
+    const H = TOP_MARGIN + BOTTOM_MARGIN + contentHeight;
+    const CENTER_Y = TOP_MARGIN + contentHeight / 2;
+
+    // center title (measure + possibly wrap to 2 lines)
+    let centerFS = 40;
+    let centerLines = [theme.center];
+    const w1 = measure(theme.center, 'mm-center-measure');
+    if (w1 > 300) {
+      const parts = theme.center.split(' ');
+      if (parts.length > 1) {
+        const mid = Math.ceil(parts.length / 2);
+        centerLines = [parts.slice(0, mid).join(' '), parts.slice(mid).join(' ')];
+      } else {
+        centerFS = 30;
+      }
+    }
+    const centerWidths = centerLines.map(l => measure(l, 'mm-center-measure'));
+    const centerHalfWidth = Math.max(...centerWidths) / 2;
+    const centerLineHeight = centerFS * 0.95;
+    const centerBlockHeight = centerLines.length * centerLineHeight;
+    const padTop = centerFS * 0.4;
+    const padBottom = centerFS * 0.22;
+    const padX = 22;
+    const rectW = centerHalfWidth * 2 + padX * 2;
+    const rectH = centerBlockHeight + padTop + padBottom;
+    const rectHalfWidth = rectW / 2;
+
+    // geometry derives from the hub's actual width so the card never
+    // collides with the topic columns, whatever the center label's length
+    const LEFT_COL_RIGHT = LEFT_X + COL_WIDTH;
+    const CENTER_X = LEFT_COL_RIGHT + HUB_GAP + rectHalfWidth;
+    const RIGHT_X = CENTER_X + rectHalfWidth + HUB_GAP;
+    const W = RIGHT_X + COL_WIDTH + LEFT_X;
+
+    const rectX = CENTER_X - rectHalfWidth;
+    const rectY = CENTER_Y - rectH / 2;
+
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+    function renderColumn(blocks, startY, colX, isRight) {
+      let y = startY;
+      blocks.forEach((block, idx) => {
+        const blockTop = y;
+        const blockMidY = blockTop + block.height / 2;
+
+        block.entries.forEach(entry => {
+          const t = document.createElementNS(NS, 'text');
+          t.setAttribute('x', colX + entry.indent);
+          t.setAttribute('y', blockTop + entry.y);
+          t.setAttribute('class', entry.cls);
+          if (entry.color) t.setAttribute('style', 'fill:' + entry.color);
+          t.textContent = entry.text;
+          svg.appendChild(t);
+        });
+
+        // arrow from center to this block
+        const rowFactor = idx - (blocks.length - 1) / 2;
+        const wiggle = rowFactor * 20;
+        const startPt = { x: CENTER_X + (isRight ? 1 : -1) * (rectHalfWidth + 12), y: CENTER_Y };
+        const gapEndX = isRight ? colX - 24 : colX + COL_WIDTH + 24;
+        const endPt = { x: gapEndX, y: blockMidY };
+        const c1 = { x: startPt.x + (endPt.x - startPt.x) * 0.35, y: startPt.y + wiggle };
+        const c2 = { x: startPt.x + (endPt.x - startPt.x) * 0.72, y: endPt.y - wiggle * 0.5 };
+
+        const dirX = endPt.x - c2.x, dirY = endPt.y - c2.y;
+        const dirLen = Math.hypot(dirX, dirY) || 1;
+        const ux = dirX / dirLen, uy = dirY / dirLen;
+        const arrowLen = 13, arrowW = 9;
+        const tipX = endPt.x, tipY = endPt.y;
+        const baseX = tipX - ux * arrowLen, baseY = tipY - uy * arrowLen;
+        const perpX = -uy, perpY = ux;
+        const leftX = baseX + perpX * (arrowW / 2), leftY = baseY + perpY * (arrowW / 2);
+        const rightX2 = baseX - perpX * (arrowW / 2), rightY2 = baseY - perpY * (arrowW / 2);
+
+        const path = document.createElementNS(NS, 'path');
+        path.setAttribute('d', `M ${startPt.x} ${startPt.y} C ${c1.x} ${c1.y}, ${c2.x} ${c2.y}, ${baseX} ${baseY}`);
+        path.setAttribute('class', 'mm-arrow');
+        path.setAttribute('style', 'stroke:' + block.entries[0].color);
+        //svg.insertBefore(path, svg.firstChild.nextSibling);
+
+        const tri = document.createElementNS(NS, 'polygon');
+        tri.setAttribute('points', `${tipX},${tipY} ${leftX},${leftY} ${rightX2},${rightY2}`);
+        tri.setAttribute('style', 'fill:' + block.entries[0].color);
+        //svg.insertBefore(tri, path.nextSibling);
+
+        y += block.height + BLOCK_GAP;
+      });
+    }
+
+    const leftStartY = TOP_MARGIN + (contentHeight - leftTotal) / 2;
+    const rightStartY = TOP_MARGIN + (contentHeight - rightTotal) / 2;
+    renderColumn(leftBlocks, leftStartY, LEFT_X, false);
+    renderColumn(rightBlocks, rightStartY, RIGHT_X, true);
+
+    // center label patch (drawn last, on top of arrows so the spine lines
+    // read as touching the hub card rather than crossing the lettering)
+    const hubRect = document.createElementNS(NS, 'rect');
+    hubRect.setAttribute('x', rectX);
+    hubRect.setAttribute('y', rectY);
+    hubRect.setAttribute('width', rectW);
+    hubRect.setAttribute('height', rectH);
+    hubRect.setAttribute('rx', 14);
+    hubRect.setAttribute('class', 'mm-hub');
+    //svg.appendChild(hubRect);
+
+    let cy0 = CENTER_Y - centerBlockHeight / 2 + centerLineHeight * 0.78;
+    centerLines.forEach(line => {
+      const t = document.createElementNS(NS, 'text');
+      t.setAttribute('x', CENTER_X);
+      t.setAttribute('y', cy0);
+      t.setAttribute('text-anchor', 'middle');
+      t.setAttribute('class', 'mm-center-text');
+      t.setAttribute('style', 'font-size:' + centerFS + 'px');
+      t.textContent = line;
+      svg.appendChild(t);
+      cy0 += centerLineHeight;
+    });
+
+    // wavy underline flourish just beneath the hub card
+    const underlineY = rectY + rectH + 9;
+    const halfW = rectHalfWidth - 10;
+    let d = `M ${CENTER_X - halfW} ${underlineY} `;
+    const segs = 5;
+    for (let i = 1; i <= segs; i++) {
+      const x = CENTER_X - halfW + (2 * halfW / segs) * i;
+      const prevX = CENTER_X - halfW + (2 * halfW / segs) * (i - 1);
+      const midX = (x + prevX) / 2;
+      const dir = i % 2 === 0 ? 1 : -1;
+      d += `Q ${midX} ${underlineY + dir * 5}, ${x} ${underlineY} `;
+    }
+    const underline = document.createElementNS(NS, 'path');
+    underline.setAttribute('d', d);
+    underline.setAttribute('class', 'mm-underline');
+    svg.appendChild(underline);
+
+    measurer.remove();
+  }
+
+  document.fonts.ready.then(() => {
+    const stack = document.getElementById('stack');
+    THEMES.forEach(theme => {
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      const head = document.createElement('div');
+      head.className = 'card-head';
+      const eyebrow = document.createElement('div');
+      eyebrow.className = 'eyebrow';
+      eyebrow.textContent = theme.code;
+      const h2 = document.createElement('h2');
+      h2.textContent = theme.center;
+      const sourceTitle = document.createElement('p');
+      //sourceTitle.className = 'source-title';
+      sourceTitle.className = 'eyebrowT';
+      sourceTitle.textContent = theme.title;
+      head.appendChild(eyebrow);
+      //head.appendChild(h2);
+      head.appendChild(sourceTitle);
+
+      const figure = document.createElement('figure');
+      figure.className = 'mindmap';
+      const figcaption = document.createElement('figcaption');
+      figcaption.className = 'sr-only';
+      figcaption.hidden = true;
+      figcaption.textContent = `Mapa mental do tema ${theme.code}: ${theme.center}`;
+
+      card.appendChild(head);
+      card.appendChild(figure);
+      figure.appendChild(figcaption);
+      stack.appendChild(card);
+
+      buildMindMap(figure, theme);
+    });
+
+    // Groups two or more theme cards in a single dashed-border block.
+    // Usage: groupThemes(['T1', 'T2'], 'Optional label') — pass the theme
+    // codes (as written in the THEMES array above) you want bundled together.
+    // Call it as many times as you like, with different code lists, right here.
+    function groupThemes(codes, label) {
+      const cards = codes
+        .map(code => Array.from(stack.children).find(card => card.querySelector('.eyebrow')?.textContent === code))
+        .filter(Boolean);
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'theme-group';
+      if (label) wrapper.setAttribute('data-label', label);
+
+      cards[0].before(wrapper);
+      cards.forEach(card => wrapper.appendChild(card));
+    }
+
+    // Example — remove or edit freely:
+    groupThemes(['Tema 1', 'Tema 2'], 'Pessoas e formação');
+    groupThemes(['Tema 3', 'Tema 4'], 'Desenvolvimento e Qualidade');
+    groupThemes(['Tema 5'], 'Evolução');
+    groupThemes(['Tema 6', 'Tema 7'], 'Privacidade, Propriedade e Prompts');
+    groupThemes(['Tema 8', 'Tema 9'], 'Engenharia e Adoção');
+  });
+</script>
+
+<style>
+  /* .mm-branch-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; letter-spacing: 0.01em; }
+  .mm-bullet-text { font-family: 'Kalam', cursive, sans-serif; font-weight: 400; font-size: 13.5px; fill: var(--muted); }
+  .mm-center-text { font-family: 'Pacifico', cursive; fill: var(--ink); }
+  .mm-center-measure { font-family: 'Pacifico', cursive; font-size: 40px; }*/
+  .mm-branch-title { font-family: 'Baloo 2', sans-serif; font-weight: 800; letter-spacing: 0.01em; }
+  .mm-bullet-text { font-family: 'Baloo 2', cursive, sans-serif; font-weight: 400; font-size: 13.5px; fill: var(--muted); }
+  .mm-center-text { font-family: 'Baloo 2', cursive; fill: var(--ink); }
+  .mm-center-measure { font-family: 'Baloo 2', cursive; font-size: 40px; }
+  .mm-hub { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+  .mm-arrow { fill: none; stroke-width: 2.4; stroke-linecap: round; opacity: 0.85; }
+  .mm-underline { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; opacity: 0.75; }
+  text.mm-branch-title { font-size: 15.5px; }
+</style>
+
+</body>
+</html>
